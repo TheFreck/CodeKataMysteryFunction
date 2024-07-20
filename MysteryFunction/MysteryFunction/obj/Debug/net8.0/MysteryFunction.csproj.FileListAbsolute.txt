@@ -1,0 +1,15 @@
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\bin\Debug\net8.0\MysteryFunction.exe
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\bin\Debug\net8.0\MysteryFunction.deps.json
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\bin\Debug\net8.0\MysteryFunction.runtimeconfig.json
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\bin\Debug\net8.0\MysteryFunction.dll
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\bin\Debug\net8.0\MysteryFunction.pdb
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\obj\Debug\net8.0\MysteryFunction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\obj\Debug\net8.0\MysteryFunction.AssemblyInfoInputs.cache
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\obj\Debug\net8.0\MysteryFunction.AssemblyInfo.cs
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\obj\Debug\net8.0\MysteryFunction.csproj.CoreCompileInputs.cache
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\obj\Debug\net8.0\MysteryFunction.sourcelink.json
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\obj\Debug\net8.0\MysteryFunction.dll
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\obj\Debug\net8.0\refint\MysteryFunction.dll
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\obj\Debug\net8.0\MysteryFunction.pdb
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\obj\Debug\net8.0\MysteryFunction.genruntimeconfig.cache
+C:\Users\chris.freckleton\source\repos\Katas\MysteryFunction\MysteryFunction\MysteryFunction\obj\Debug\net8.0\ref\MysteryFunction.dll
