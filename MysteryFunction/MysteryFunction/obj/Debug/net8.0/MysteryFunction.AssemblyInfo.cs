@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MysteryFunction")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4401470be4494285802504c00465cb46dff352d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09036dd21fd39af1bf4676abdd2cdf2a5039fcb9")]
 [assembly: System.Reflection.AssemblyProductAttribute("MysteryFunction")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MysteryFunction")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
