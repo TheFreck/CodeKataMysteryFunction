@@ -10,6 +10,11 @@ namespace MysteryFunction
 {
     public class Function
     {
+        //public static string FindIndex(long input)
+        //{
+
+        //}
+
         public static long[][] FlipBits(long[][] input)
         {
             for(var i=0; i<input.Length; i++)
@@ -34,11 +39,15 @@ namespace MysteryFunction
             return (long)Math.Log2(input);
         }
 
-        public static long[][] GetTArray(long input)
+        public static Dictionary<long, int[]> GetTArray(long input)
         {
             long binLength = (long)Math.Ceiling(Math.Log2(input));
             var arrLen = (int)Math.Pow(2, binLength);
-            var arr = Enumerable.Range(0, arrLen).Select(i => new long[binLength]).ToArray();
+            var arr = new Dictionary<long, int[]>();
+            for (long i=0; i<arrLen; i++)
+            {
+                arr.Add(i,new int[binLength]);
+            }
             return arr;
         }
 
@@ -46,10 +55,10 @@ namespace MysteryFunction
         {
             long binLength = (long)Math.Ceiling(Math.Log2(input));
             int arrLen = (int)Math.Pow(2, binLength);
-            var arr = new long[arrLen][];
-            for (long i = 0; i < arr.Length; i++)
+            var arr = new Dictionary<long, int[]>();
+            for (long i = 0; i < arrLen; i++)
             {
-                arr[i] = new long[binLength];
+                arr.Add(i, new int[binLength]);
                 long mod = 2;
                 for (long j = arr[i].Length - 1; j >= 0; j--)
                 {
@@ -73,32 +82,26 @@ namespace MysteryFunction
 
         public static long MysteryInv(long input)
         {
-            var answers = new List<long>();
+            var inBin = Convert.ToString(input, 2);
             long binLength = (long)Math.Ceiling(Math.Log2(input));
             long arrLen = (long)Math.Pow(2, binLength);
-            var arr = new long[arrLen][];
-            for (long i = 0; i < arr.Length; i++)
+            var arr = new Dictionary<long, int[]>();
+            for (long i = arrLen; i >=0; i--)
             {
-                arr[i] = new long[binLength];
-                int mod = 2;
-                for (long j = arr[i].Length - 1; j >= 0; j--)
+                arr.Add(i, new int[binLength]);
+                long mod = 2;
+                for (long j = binLength - 1; j >= 0; j--)
                 {
-                    mod = (int)Math.Pow(2, j) * 4;
+                    mod = (long)Math.Pow(2, j) * 4;
                     long modX = i % mod;
                     if (modX >= mod / 4 && modX < 3 * mod / 4)
                     {
                         arr[i][j] = 1;
-                        continue;
                     }
                 }
                 var entry = arr[i];
-                long answer = 0;
-                for (long k = 0; k < entry.Length; k++)
-                {
-                    answer += entry[k] * (long)Math.Pow(2, k);
-                }
-                answers.Add(answer);
-                if(answer == input)
+                var binString = String.Join("",entry);
+                if(binString == inBin)
                 {
                     return i;
                 }
