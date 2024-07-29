@@ -80,21 +80,34 @@ namespace MysteryFunction.Specs
         private static long expect;
     }
 
-    public class When_Finding_The_Mystery_Array
+    public class When_Finding_The_Mystery
     {
         Establish context = () =>
         {
-            input = 6;
-            expect = 5;
+            index = new long[] { 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 };
+            expect = new long[] {0,1,3,2,6,7,5,4,12,13,15,14,10,11,9,8 };
+            value = new long[index.Length];
         };
 
-        Because of = () => answer = Function.Mystery(input);
+        Because of = () =>
+        {
+            for (var i = 0; i < index.Length; i++)
+            {
+                value[i] = Function.Mystery(index[i]);
+            }
+        };
 
-        It Should_Return_Value_From_Bin_Index = () => answer.ShouldEqual(expect);
+        It Should_Return_Value_From_Bin_Index = () =>
+        {
+            for (var i = 0; i < expect.Length; i++)
+            {
+                value[i].ShouldEqual(expect[i]);
+            }
+        };
 
-        private static long input;
-        private static long expect;
-        private static long answer;
+        private static long[] index;
+        private static long[] expect;
+        private static long[] value;
     }
 
     public class When_Flipping_The_Last_Four_Bits
@@ -260,29 +273,50 @@ namespace MysteryFunction.Specs
         private static long[][] answer;
     }
 
-    public class When_Getting_Index_From_Binary_Array
+    public class When_Finding_The_Inverse_Mystery
     {
         Establish context = () =>
         {
-            input = 5;
-            expect = 6;
+            value = new long[] { 0,1,2,3,4,5,6,7,8, 9, 10,11,12,13,14,15 };
+            expect = new long[]{ 0,1,3,2,7,6,4,5,15,14,12,13,8,9,11,10 };
+            index = new long[value.Length];
         };
 
-        Because of = () => answer = Function.MysteryInv(input);
+        Because of = () =>
+        {
+            for (var i = 0; i < value.Length; i++)
+            {
+                index[i] = Function.MysteryInv(value[i]);
+            }
+        };
 
-        It Should_Return_The_Index_For_The_Input = () => answer.ShouldEqual(expect);
-        
-        private static long input;
-        private static long expect;
-        private static long answer;
+        It Should_Return_The_Index_For_The_Input = () =>
+        {
+            for (var i = 0; i < expect.Length; i++)
+            {
+                index[i].ShouldEqual(expect[i]);
+            }
+        };
+
+        private static long[] value;
+        private static long[] expect;
+        private static long[] index;
     }
 
     public class When_Building_The_Specific_Bin_Index
     {
         Establish context = () =>
         {
-            input = 7;
-            expect = 
+            input = 28;
+            expect = 23;
         };
+
+        Because of = () => answer = Function.FindIndex(input);
+
+        It Should_Return_The_Index = () => answer.ShouldEqual(expect);
+
+        private static int input;
+        private static int expect;
+        private static long answer;
     }
 }
